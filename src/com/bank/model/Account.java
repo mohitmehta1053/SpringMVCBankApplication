@@ -116,7 +116,7 @@ public class Account {
 		MapSqlParameterSource map=new MapSqlParameterSource();
 		map.addValue("username", username);
 		map.addValue("password", password);
-		
+ 		
 		int i=jdbc.update("insert into users(username,password) values(:username,:password)", map);
 		if(i>0)
 		{
